@@ -1,9 +1,13 @@
 import React from 'react'
+import { CookiesProvider } from 'react-cookie'
 
-export default function Main() {
+export default function Main(props) {
+
+    function buttonHandler(){
+        console.log(props.cookies)
+    }
+
     return (
-        <div>
-            Hello from main 
-        </div>
+        <button onClick={buttonHandler}>CLICK</button>
     )
 }
