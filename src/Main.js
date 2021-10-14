@@ -1,13 +1,23 @@
-import React from 'react'
-import { CookiesProvider } from 'react-cookie'
+import React from "react";
+import { useState } from "react";
+import { Cookies } from "react-cookie";
 
 export default function Main(props) {
-
-    function buttonHandler(){
-        console.log(props.cookies)
+  const [message, setMessage] = useState("");
+  function buttonHandler() {
+      let myCookies = new Cookies()
+      let a = myCookies.getAll('session')
+      console.log(a)
+    if (a.session) {
+      setMessage("Your Session Is Still Active");
+    } else {
+      setMessage("your session has expired please refresh the page");
     }
-
-    return (
-        <button onClick={buttonHandler}>CLICK</button>
-    )
+  }
+  return (
+    <div>
+      <button onClick={buttonHandler}>click to check session status</button>
+      <p>{message}</p>
+    </div>
+  );
 }
