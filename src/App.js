@@ -1,5 +1,5 @@
 import "./App.css";
-import Main from "./Main";
+import CheckStatus from "./CheckStatus";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 
@@ -35,7 +35,7 @@ function App() {
     <div className="App">
       <h1>Session Tracker</h1>
       <p>Click the button below to check the status of your session</p>
-      <Main />
+      <CheckStatus />
       <p>click the button below to refresh your sesion:</p>
       <button className="buttonRefresh" onClick={refreshSession}>refresh session</button>
       <p className="message">{message}</p>

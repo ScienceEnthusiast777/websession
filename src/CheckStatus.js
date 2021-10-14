@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Cookies } from "react-cookie";
 
-export default function Main(props) {
+export default function CheckStatus(props) {
   const [message, setMessage] = useState("");
   function buttonHandler() {
     let myCookies = new Cookies();
