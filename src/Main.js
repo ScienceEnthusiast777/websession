@@ -15,7 +15,7 @@ export default function Main(props) {
   }
   return (
     <div>
-      <button onClick={buttonHandler}>click to check session status</button>
+      <button className="buttonCheck" onClick={buttonHandler}>click to check session status</button>
       <p className="message">{message}</p>
     </div>
   );
