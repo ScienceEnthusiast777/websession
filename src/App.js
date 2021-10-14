@@ -17,7 +17,7 @@ function App() {
       max = 3600 - (minutes * 60)
       time.setHours(0, 0, 0, 0);
     } else {
-      time.setTime(time.getTime() + 1 * 60 * 1000);
+      time.setTime(time.getTime() + 30 * 60 * 1000);
     }
     let val = "expiring at: " + time.toString();
     setCookie("session", val, { path: "/", expires: time, maxAge: max });
