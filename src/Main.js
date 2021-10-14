@@ -5,9 +5,8 @@ import { Cookies } from "react-cookie";
 export default function Main(props) {
   const [message, setMessage] = useState("");
   function buttonHandler() {
-      let myCookies = new Cookies()
-      let a = myCookies.getAll('session')
-      console.log(a)
+    let myCookies = new Cookies();
+    let a = myCookies.getAll("session");
     if (a.session) {
       setMessage("Your Session Is Still Active");
     } else {
@@ -17,7 +16,7 @@ export default function Main(props) {
   return (
     <div>
       <button onClick={buttonHandler}>click to check session status</button>
-      <p>{message}</p>
+      <p className="message">{message}</p>
     </div>
   );
 }

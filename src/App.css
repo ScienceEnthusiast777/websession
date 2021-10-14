@@ -1,8 +1,14 @@
 .App {
   text-align: center;
   margin: 13vh;
+  padding: 15px;
   border: solid black 5px;
   border-radius: 25px;
+}
+
+.message {
+  color: red;
+  padding: 3px;
 }
 
 .App-logo {
