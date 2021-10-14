@@ -37,7 +37,7 @@ function App() {
       <p>Click the button below to check the status of your session</p>
       <Main />
       <p>click the button below to refresh your sesion:</p>
-      <button onClick={refreshSession}>refresh session</button>
+      <button className="buttonRefresh" onClick={refreshSession}>refresh session</button>
       <p className="message">{message}</p>
     </div>
   );
